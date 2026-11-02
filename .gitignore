@@ -1,0 +1,16 @@
+# Build files
+build/
+cmake-build-*/
+
+# Executables
+*.exe
+*.o
+*.a
+*.dll
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.log

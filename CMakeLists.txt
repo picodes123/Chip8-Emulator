@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20)
+project(CHIP8EMULATOR LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(chip8 src/main.cpp src/chip8.cpp)
+set(SDL2_ROOT "C:/Coding Stuffs/SDL2-2.32.10/x86_64-w64-mingw32")
+target_include_directories(chip8 PRIVATE "${SDL2_ROOT}/include")
+target_include_directories(chip8 PRIVATE "${CMAKE_SOURCE_DIR}/include")
+target_link_directories(chip8 PRIVATE "${SDL2_ROOT}/lib")
+target_link_libraries(chip8 PRIVATE SDL2)
