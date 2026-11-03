@@ -38,7 +38,7 @@ CHIP-8 follows a simple fetch-decode-execute cycle:
 
 ## Demo
 
-- [Pong 2 Gameplay](Demo/PONG2.mp4)
+- [Pong 2 Gameplay](Demo/PONG2.gif)
 - [Tetris Gameplay](Demo/TETRIS.mp4)
 
 ## Features
