@@ -30,7 +30,8 @@ const unsigned char chip8_fontset[80]={     //each hexadeci char take 5byte so 1
 
 
 Chip8::Chip8(){
-  
+
+    //initialize to 0
     std::memset(memory,0,sizeof(memory));
     std::memset(V,0,sizeof(V));
     std::memset(stack,0,sizeof(stack));
@@ -46,7 +47,7 @@ Chip8::Chip8(){
     sp = 0;
     sound_timer = 0;
     delay_timer = 0;
-    drawFlag = false;
+    drawFlag = true;
     waitingForKey = false;
     waitingRegister = 0;
 
@@ -497,10 +498,12 @@ void Chip8::emulate_cycle(){
     
 }
 
-std::uint8_t Chip8::get_register(std::uint8_t index)const {
-    return V[index];
-}
+void Chip8::update_timers(){
 
-void Chip8::set_memory(std::uint16_t address, std::uint8_t value) {
-    memory[address] = value;
+    if (delay_timer > 0){
+        delay_timer--;                                       //delay_timer = delay_timer - 1
+    }
+    if (sound_timer > 0){
+        sound_timer--;                                       //sound_timer = sound_timer - 1
+    }
 }

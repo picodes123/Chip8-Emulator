@@ -24,16 +24,13 @@ class Chip8 {
 
     public:
 
-    void set_memory(std::uint16_t address, std::uint8_t value);
-    std::uint8_t get_register(std::uint8_t index)const;
-
     std::uint8_t gfx[64*32];   //graphic buffer 64*32
     std::uint8_t key[16];      //chip-8 has 16 keys
     bool drawFlag;             //indicates a draw has occured  
 
     Chip8();
 
-
+    void update_timers();      //for updating timers
     void emulate_cycle();      //emulate one cycle
     bool load(const char *file_path);   //load ROM
 
