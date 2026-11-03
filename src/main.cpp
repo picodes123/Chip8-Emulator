@@ -170,8 +170,7 @@ int main(int argc, char **argv) {                               //argc is argume
             SDL_RenderCopy(renderer, screen, nullptr, nullptr);     //copy texture(screen) onto renderer
             SDL_RenderPresent(renderer);                            //display the renderer
         }
-
-        //std::this_thread::sleep_for(std::chrono::microseconds(1200));//
+            //std::this_thread::sleep_for(std::chrono::microseconds(1200));//     //sleep currently commented cause of slow speed of emu
     }
     
     SDL_DestroyTexture(screen);
