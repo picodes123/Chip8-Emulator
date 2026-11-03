@@ -38,8 +38,12 @@ CHIP-8 follows a simple fetch-decode-execute cycle:
 
 ## Demo
 
-- [Pong 2 Gameplay](Demo/PONG2.gif)
-- [Tetris Gameplay](Demo/TETRIS.mp4)
+### Pong 2 Gameplay
+![Pong 2 Gameplay](Demo/PONG2.gif)
+
+## CHIP-8 IBM Logo Test
+
+![IBM Logo Test](Demo/SS/IBM%20logo.png)
 
 ## Features
 
